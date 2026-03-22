@@ -50,6 +50,30 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-
 .btn-ab:hover{background:var(--acc2)}
 /* NAV */
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;background:rgba(10,10,15,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr)}
+/* HAMBURGER */
+.ham-btn{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:6px;border-radius:8px;transition:background .2s;flex-shrink:0}
+.ham-btn:hover{background:rgba(255,77,0,.1)}
+.ham-btn span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px;transition:all .3s}
+.ham-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.ham-btn.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.side-menu{position:fixed;top:0;left:-280px;width:280px;height:100vh;background:var(--sur);border-right:1px solid var(--bdr);z-index:999;transition:left .3s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
+.side-menu.open{left:0;box-shadow:4px 0 30px rgba(0,0,0,.5)}
+.side-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,.6);backdrop-filter:blur(3px)}
+.side-overlay.show{display:block}
+.side-header{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.4rem;border-bottom:1px solid var(--bdr)}
+.side-logo{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--txt)}
+.side-logo span{color:var(--acc)}
+.side-close{background:none;border:none;color:var(--mut);font-size:1.2rem;cursor:pointer;padding:4px 8px;border-radius:6px;transition:all .2s}
+.side-close:hover{color:var(--acc);background:rgba(255,77,0,.1)}
+.side-section{padding:.6rem .8rem}
+.side-section-title{font-size:.65rem;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.1em;padding:.4rem .6rem;margin-bottom:.2rem}
+.side-link{display:flex;align-items:center;gap:.75rem;padding:.65rem .7rem;border-radius:10px;text-decoration:none;color:var(--txt);font-size:.88rem;font-weight:600;transition:all .2s;cursor:pointer}
+.side-link:hover{background:rgba(255,77,0,.1);color:var(--acc)}
+.side-link .sl-icon{font-size:1.1rem;width:24px;text-align:center;flex-shrink:0}
+.side-divider{height:1px;background:var(--bdr);margin:.4rem .8rem}
+.side-footer{margin-top:auto;padding:1rem 1.4rem;border-top:1px solid var(--bdr)}
+.side-footer p{font-size:.72rem;color:var(--mut);line-height:1.5}
 .logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--txt);text-decoration:none;cursor:pointer}
 .logo span{color:var(--acc)}
 .nav-r{display:flex;align-items:center;gap:.6rem}
@@ -275,9 +299,70 @@ footer strong{color:var(--txt)}
   </div>
 </div>
 
+<!-- SIDE MENU OVERLAY -->
+<div class="side-overlay" id="sideOverlay" onclick="closeSideMenu()"></div>
+
+<!-- SIDE DRAWER -->
+<div class="side-menu" id="sideMenu">
+  <div class="side-header">
+    <div class="side-logo">Free<span>PDFConverterr</span></div>
+    <button class="side-close" onclick="closeSideMenu()">✕</button>
+  </div>
+
+  <div class="side-section">
+    <div class="side-section-title">Main</div>
+    <a class="side-link" href="index.html"><span class="sl-icon">🏠</span> Home</a>
+    <a class="side-link" href="blog.html"><span class="sl-icon">📝</span> Blog</a>
+  </div>
+
+  <div class="side-divider"></div>
+
+  <div class="side-section">
+    <div class="side-section-title">PDF Tools</div>
+    <a class="side-link" href="index.html#merge"       onclick="closeSideMenu();setTimeout(()=>openTool('merge'),300)"><span class="sl-icon">📄</span> Merge PDF</a>
+    <a class="side-link" href="index.html#split"       onclick="closeSideMenu();setTimeout(()=>openTool('split'),300)"><span class="sl-icon">✂️</span> Split PDF</a>
+    <a class="side-link" href="index.html#compress"    onclick="closeSideMenu();setTimeout(()=>openTool('compress'),300)"><span class="sl-icon">🗜️</span> Compress PDF</a>
+    <a class="side-link" href="index.html#rotate"      onclick="closeSideMenu();setTimeout(()=>openTool('rotate'),300)"><span class="sl-icon">🔃</span> Rotate PDF</a>
+    <a class="side-link" href="index.html#pdf2jpg"     onclick="closeSideMenu();setTimeout(()=>openTool('pdf2jpg'),300)"><span class="sl-icon">🖼️</span> PDF to JPG</a>
+    <a class="side-link" href="index.html#jpg2pdf"     onclick="closeSideMenu();setTimeout(()=>openTool('jpg2pdf'),300)"><span class="sl-icon">🔄</span> Images to PDF</a>
+    <a class="side-link" href="index.html#watermarkpdf"onclick="closeSideMenu();setTimeout(()=>openTool('watermarkpdf'),300)"><span class="sl-icon">💧</span> Watermark PDF</a>
+  </div>
+
+  <div class="side-divider"></div>
+
+  <div class="side-section">
+    <div class="side-section-title">Image Tools</div>
+    <a class="side-link" href="index.html#imgcompress" onclick="closeSideMenu();setTimeout(()=>openTool('imgcompress'),300)"><span class="sl-icon">🗜️</span> Compress Image</a>
+    <a class="side-link" href="index.html#resize"      onclick="closeSideMenu();setTimeout(()=>openTool('resize'),300)"><span class="sl-icon">📐</span> Resize Image</a>
+    <a class="side-link" href="index.html#crop"        onclick="closeSideMenu();setTimeout(()=>openTool('crop'),300)"><span class="sl-icon">✂️</span> Crop Image</a>
+    <a class="side-link" href="index.html#jpg2png"     onclick="closeSideMenu();setTimeout(()=>openTool('jpg2png'),300)"><span class="sl-icon">🔁</span> JPG to PNG</a>
+    <a class="side-link" href="index.html#png2jpg"     onclick="closeSideMenu();setTimeout(()=>openTool('png2jpg'),300)"><span class="sl-icon">🔀</span> PNG to JPG</a>
+    <a class="side-link" href="index.html#watermarkimg"onclick="closeSideMenu();setTimeout(()=>openTool('watermarkimg'),300)"><span class="sl-icon">💧</span> Watermark Image</a>
+  </div>
+
+  <div class="side-divider"></div>
+
+  <div class="side-section">
+    <div class="side-section-title">Info</div>
+    <a class="side-link" href="about.html"><span class="sl-icon">ℹ️</span> About</a>
+    <a class="side-link" href="contact.html"><span class="sl-icon">📞</span> Contact</a>
+    <a class="side-link" href="privacy-policy.html"><span class="sl-icon">🔒</span> Privacy Policy</a>
+    <a class="side-link" href="terms.html"><span class="sl-icon">📋</span> Terms of Service</a>
+  </div>
+
+  <div class="side-footer">
+    <p>🔒 All tools run in your browser.<br/>No files uploaded to any server.<br/>100% Free · No signup needed.</p>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav>
-  <div class="logo" onclick="showMain()">Free<span>PDFConverterr</span></div>
+  <div style="display:flex;align-items:center;gap:.8rem">
+    <button class="ham-btn" id="hamBtn" onclick="toggleSideMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="logo" onclick="showMain()">Free<span>PDFConverterr</span></div>
+  </div>
   <div class="nav-r">
     <a href="blog.html" style="color:#8888aa;text-decoration:none;font-size:.85rem;font-weight:600;">📝 Blog</a>
     <span class="nav-badge">100% Free</span>
@@ -1680,6 +1765,31 @@ document.addEventListener('change', function(e) {
     var d2=document.getElementById('pdfPageRange');
     if(d2) d2.style.display = e.target.value==='range' ? '' : 'none';
   }
+});
+
+// ═══ SIDE MENU ═══
+function toggleSideMenu() {
+  var menu = document.getElementById('sideMenu');
+  var btn  = document.getElementById('hamBtn');
+  var overlay = document.getElementById('sideOverlay');
+  var isOpen = menu.classList.contains('open');
+  if (isOpen) { closeSideMenu(); }
+  else {
+    menu.classList.add('open');
+    btn.classList.add('open');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeSideMenu() {
+  document.getElementById('sideMenu').classList.remove('open');
+  document.getElementById('hamBtn').classList.remove('open');
+  document.getElementById('sideOverlay').classList.remove('show');
+  document.body.style.overflow = '';
+}
+// Close side menu on Escape
+document.addEventListener('keydown', function(e){
+  if (e.key==='Escape') closeSideMenu();
 });
 
 // ═══ AUTH ═══
