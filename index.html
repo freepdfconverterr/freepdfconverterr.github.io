@@ -581,29 +581,29 @@ var TOOLS = [
   {id:'merge',       cat:'pdf',   icon:'🗂️', bg:'rgba(100,100,255,0.12)', badge:'hot',  label:'🔥 Popular', name:'Merge PDF',           desc:'Combine multiple PDFs. Reorder files, rename output, optional auto-compress.', accept:'.pdf', multi:true,  opts:'merge'},
   {id:'split',       cat:'pdf',   icon:'✂️', bg:'rgba(255,200,0,0.1)',   badge:'free', label:'Free',       name:'Split PDF',           desc:'Split by range, every N pages, all pages, or remove specific pages.', accept:'.pdf', multi:false, opts:'split'},
   {id:'rotate',      cat:'pdf',   icon:'🔃', bg:'rgba(180,100,255,0.1)', badge:'free', label:'Free',       name:'Rotate PDF',          desc:'Rotate all, odd, even, or specific pages. Choose any angle.',      accept:'.pdf', multi:false, opts:'rotate'},
-  {id:'compress',    cat:'pdf',   icon:'🗜️',bg:'rgba(0,229,160,0.12)',  badge:'hot',  label:'🔥 Popular', name:'Compress PDF',        desc:'4 quality presets (Screen/eBook/Printer/Prepress). Optional grayscale.',   accept:'.pdf', multi:false, opts:'pdfquality'},
+  {id:'compress',    cat:'pdf',   icon:'🗜️',bg:'rgba(0,229,160,0.12)',  badge:'hot',  label:'🔥 Popular', name:'Compress PDF',        desc:'4 quality presets (Screen/eBook/Printer/Prepress). Optional grayscale. Supports multiple files.',   accept:'.pdf', multi:true, opts:'pdfquality'},
   {id:'pdf2jpg',     cat:'pdf',   icon:'🖼️',bg:'rgba(255,140,66,0.12)', badge:'hot',  label:'🔥 Popular', name:'PDF to JPG',           desc:'Convert PDF pages to JPG or PNG. Set scale, quality, and page range.',      accept:'.pdf', multi:false, opts:'pdf2jpg'},
   {id:'jpg2pdf',     cat:'pdf',   icon:'🔄', bg:'rgba(0,229,160,0.1)',   badge:'free', label:'Free',       name:'Images to PDF',        desc:'Combine images into PDF. Choose A4/Letter/image size, margins, fit mode.',          accept:'image/*', multi:true, opts:'jpg2pdf'},
   {id:'watermarkpdf',cat:'pdf',   icon:'💧', bg:'rgba(255,77,0,0.12)',   badge:'free', label:'Free',       name:'Watermark PDF',        desc:'Custom text, color, angle, opacity. Apply to all or specific pages.',     accept:'.pdf', multi:false, opts:'wmpdf'},
   {id:'pagenumbers', cat:'pdf',   icon:'🔢', bg:'rgba(77,143,255,0.12)', badge:'new',  label:'✨ New',      name:'Add Page Numbers',     desc:'6 positions, 4 formats, custom start number, skip cover pages.',        accept:'.pdf', multi:false, opts:'pagenum'},
-  {id:'grayscalepdf',cat:'pdf',   icon:'⬛', bg:'rgba(150,150,150,0.1)', badge:'new',  label:'✨ New',      name:'Grayscale PDF',        desc:'Convert a colorful PDF to black and white.',         accept:'.pdf', multi:false, opts:'none'},
+  {id:'grayscalepdf',cat:'pdf',   icon:'⬛', bg:'rgba(150,150,150,0.1)', badge:'new',  label:'✨ New',      name:'Grayscale PDF',        desc:'Convert colorful PDFs to black and white. Supports multiple files.',         accept:'.pdf', multi:true, opts:'none'},
   {id:'reorderpdf',  cat:'pdf',   icon:'🔀', bg:'rgba(255,77,0,0.1)',    badge:'new',  label:'✨ New',      name:'Reverse PDF Pages',    desc:'Reverse the order of all pages in your PDF.',        accept:'.pdf', multi:false, opts:'none'},
   // IMAGE
-  {id:'imgcompress', cat:'image', icon:'🗜️',bg:'rgba(0,229,160,0.12)',  badge:'hot',  label:'🔥 Popular', name:'Compress Image',       desc:'Set quality, choose JPG/PNG/WebP output format.',     accept:'image/*', multi:false, opts:'quality'},
-  {id:'resize',      cat:'image', icon:'📐', bg:'rgba(77,143,255,0.12)', badge:'free', label:'Free',       name:'Resize Image',         desc:'Presets for HD/Social Media/Instagram or custom pixels.',            accept:'image/*', multi:false, opts:'resize'},
+  {id:'imgcompress', cat:'image', icon:'🗜️',bg:'rgba(0,229,160,0.12)',  badge:'hot',  label:'🔥 Popular', name:'Compress Image',       desc:'Set quality, choose JPG/PNG/WebP output format. Supports multiple files.',     accept:'image/*', multi:true, opts:'quality'},
+  {id:'resize',      cat:'image', icon:'📐', bg:'rgba(77,143,255,0.12)', badge:'free', label:'Free',       name:'Resize Image',         desc:'Presets for HD/Social Media/Instagram or custom pixels. Supports multiple files.',            accept:'image/*', multi:true, opts:'resize'},
   {id:'crop',        cat:'image', icon:'✂️', bg:'rgba(168,85,247,0.12)', badge:'free', label:'Free',       name:'Crop Image',           desc:'Manual crop or quick center/corner square crop shortcut.',    accept:'image/*', multi:false, opts:'crop'},
   {id:'jpg2png',     cat:'image', icon:'🔁', bg:'rgba(255,77,143,0.12)', badge:'free', label:'Free',       name:'JPG to PNG',           desc:'Convert JPG to transparent PNG. Set quality and background.',      accept:'.jpg,.jpeg', multi:true, opts:'convfmt'},
   {id:'png2jpg',     cat:'image', icon:'🔀', bg:'rgba(255,200,0,0.1)',   badge:'free', label:'Free',       name:'PNG to JPG',           desc:'Convert PNG to JPG. Set quality and background fill color.',            accept:'.png', multi:true, opts:'convfmt'},
   {id:'webp2jpg',    cat:'image', icon:'🔄', bg:'rgba(0,200,255,0.1)',   badge:'new',  label:'✨ New',      name:'WebP to JPG',          desc:'Convert WebP to JPG. Set quality and background color.',          accept:'.webp', multi:true, opts:'convfmt'},
   {id:'jpg2webp',    cat:'image', icon:'🌐', bg:'rgba(100,200,100,0.1)', badge:'new',  label:'✨ New',      name:'JPG to WebP',          desc:'Convert to WebP for faster websites. Set quality level.',           accept:'.jpg,.jpeg,.png', multi:true, opts:'convfmt'},
-  {id:'watermarkimg',cat:'image', icon:'💧', bg:'rgba(255,77,0,0.1)',    badge:'free', label:'Free',       name:'Watermark Image',      desc:'6 positions incl. tiled. Custom color, font size, opacity.',  accept:'image/*', multi:false, opts:'wmimg'},
+  {id:'watermarkimg',cat:'image', icon:'💧', bg:'rgba(255,77,0,0.1)',    badge:'free', label:'Free',       name:'Watermark Image',      desc:'6 positions incl. tiled. Custom color, font size, opacity. Supports multiple files.',  accept:'image/*', multi:true, opts:'wmimg'},
   {id:'grayscale',   cat:'image', icon:'🖤', bg:'rgba(150,150,150,0.12)',badge:'free', label:'Free',       name:'Image to Grayscale',   desc:'Convert color images to beautiful black and white.', accept:'image/*', multi:true, opts:'none'},
-  {id:'flip',        cat:'image', icon:'🔄', bg:'rgba(0,200,255,0.1)',   badge:'free', label:'Free',       name:'Flip Image',           desc:'Flip horizontal, vertical, or both. Choose JPG or PNG output.',            accept:'image/*', multi:false, opts:'flip'},
-  {id:'rotateimg',   cat:'image', icon:'🔃', bg:'rgba(255,140,0,0.1)',   badge:'free', label:'Free',       name:'Rotate Image',         desc:'Preset angles or any custom angle. Choose background fill.',          accept:'image/*', multi:false, opts:'rotimg'},
-  {id:'brightness',  cat:'image', icon:'☀️', bg:'rgba(255,230,0,0.1)',   badge:'new',  label:'✨ New',      name:'Brightness & Contrast',desc:'Adjust brightness, contrast, saturation and hue shift.',     accept:'image/*', multi:false, opts:'bright'},
-  {id:'sharpen',     cat:'image', icon:'🔆', bg:'rgba(255,100,100,0.1)', badge:'new',  label:'✨ New',      name:'Sharpen Image',        desc:'Make blurry images sharp and clear.',                accept:'image/*', multi:false, opts:'none'},
-  {id:'blur',        cat:'image', icon:'🌫️',bg:'rgba(100,100,255,0.1)', badge:'new',  label:'✨ New',      name:'Blur Image',           desc:'Gaussian or box blur with adjustable radius.',                    accept:'image/*', multi:false, opts:'bluropt'},
-  {id:'imgpdf',      cat:'image', icon:'📄', bg:'rgba(255,77,143,0.1)',  badge:'new',  label:'✨ New',      name:'Image to PDF',         desc:'Convert a single image to a PDF document.',          accept:'image/*', multi:false, opts:'none'},
+  {id:'flip',        cat:'image', icon:'🔄', bg:'rgba(0,200,255,0.1)',   badge:'free', label:'Free',       name:'Flip Image',           desc:'Flip horizontal, vertical, or both. Supports multiple files.',            accept:'image/*', multi:true, opts:'flip'},
+  {id:'rotateimg',   cat:'image', icon:'🔃', bg:'rgba(255,140,0,0.1)',   badge:'free', label:'Free',       name:'Rotate Image',         desc:'Preset angles or any custom angle. Supports multiple files.',          accept:'image/*', multi:true, opts:'rotimg'},
+  {id:'brightness',  cat:'image', icon:'☀️', bg:'rgba(255,230,0,0.1)',   badge:'new',  label:'✨ New',      name:'Brightness & Contrast',desc:'Adjust brightness, contrast, saturation and hue shift. Supports multiple files.',     accept:'image/*', multi:true, opts:'bright'},
+  {id:'sharpen',     cat:'image', icon:'🔆', bg:'rgba(255,100,100,0.1)', badge:'new',  label:'✨ New',      name:'Sharpen Image',        desc:'Make blurry images sharp and clear. Supports multiple files.',                accept:'image/*', multi:true, opts:'none'},
+  {id:'blur',        cat:'image', icon:'🌫️',bg:'rgba(100,100,255,0.1)', badge:'new',  label:'✨ New',      name:'Blur Image',           desc:'Gaussian or box blur with adjustable radius. Supports multiple files.',                    accept:'image/*', multi:true, opts:'bluropt'},
+  {id:'imgpdf',      cat:'image', icon:'📄', bg:'rgba(255,77,143,0.1)',  badge:'new',  label:'✨ New',      name:'Image to PDF',         desc:'Convert one or multiple images into a single PDF document.',          accept:'image/*', multi:true, opts:'none'},
 ];
 
 // ═══ STATE ═══
@@ -1252,43 +1252,44 @@ async function tRotatePDF() {
 }
 
 async function tCompressPDF() {
-  setP(10, 'Loading PDF...'); var PDFDoc = PDFLib.PDFDocument;
-  var buf = await toolFiles[0].arrayBuffer(); var doc = await PDFDoc.load(buf, {ignoreEncryption:true});
+  var PDFDoc = PDFLib.PDFDocument;
   var preset = document.getElementById('optPQ') ? document.getElementById('optPQ').value : 'ebook';
   var doGray = document.getElementById('optCompressGray') && document.getElementById('optCompressGray').checked;
-  setP(40, 'Applying compression preset: '+preset+'...');
-  // If grayscale is checked, render each page via pdf.js and re-embed
-  if (doGray) {
-    setP(50, 'Converting to grayscale...');
-    var pdf = await pdfjsLib.getDocument({data: new Uint8Array(buf)}).promise;
-    var scaleMap = {screen:1.0, ebook:1.5, printer:2.0, prepress:2.5};
-    var qualMap  = {screen:0.5, ebook:0.75, printer:0.9, prepress:0.95};
-    var scale = scaleMap[preset]||1.5; var qual = qualMap[preset]||0.75;
-    var newDoc = await PDFDoc.create();
-    for (var i=1;i<=pdf.numPages;i++) {
-      setP(Math.round(50+40*(i/pdf.numPages)),'Grayscale page '+i+'...');
-      var page = await pdf.getPage(i); var vp = page.getViewport({scale:scale});
-      var canvas = document.createElement('canvas'); canvas.width=vp.width; canvas.height=vp.height;
-      var ctx=canvas.getContext('2d'); await page.render({canvasContext:ctx,viewport:vp}).promise;
-      var id=ctx.getImageData(0,0,canvas.width,canvas.height);
-      for (var j=0;j<id.data.length;j+=4){var g=id.data[j]*0.299+id.data[j+1]*0.587+id.data[j+2]*0.114;id.data[j]=id.data[j+1]=id.data[j+2]=g;}
-      ctx.putImageData(id,0,0);
-      var blob=await new Promise(function(res){canvas.toBlob(res,'image/jpeg',qual);}); var imgBuf=await blob.arrayBuffer();
-      var img=await newDoc.embedJpg(imgBuf); var np=newDoc.addPage([img.width,img.height]); np.drawImage(img,{x:0,y:0,width:img.width,height:img.height});
+  var baseName = (document.getElementById('optCompressName')?document.getElementById('optCompressName').value.trim():'compressed')||'compressed';
+  var results = [];
+  for (var fi = 0; fi < toolFiles.length; fi++) {
+    var fileLabel = toolFiles.length > 1 ? ' ('+fi+1+'/'+toolFiles.length+')' : '';
+    setP(Math.round(5+90*(fi/toolFiles.length)), 'Processing PDF '+(fi+1)+'...');
+    var buf = await toolFiles[fi].arrayBuffer();
+    var doc = await PDFDoc.load(buf, {ignoreEncryption:true});
+    var bytes;
+    if (doGray) {
+      var pdf = await pdfjsLib.getDocument({data: new Uint8Array(buf)}).promise;
+      var scaleMap = {screen:1.0, ebook:1.5, printer:2.0, prepress:2.5};
+      var qualMap  = {screen:0.5, ebook:0.75, printer:0.9, prepress:0.95};
+      var scale = scaleMap[preset]||1.5; var qual = qualMap[preset]||0.75;
+      var newDoc = await PDFDoc.create();
+      for (var i=1;i<=pdf.numPages;i++) {
+        setP(Math.round(5+85*(fi/toolFiles.length)+85*(i/pdf.numPages)/toolFiles.length),'File '+(fi+1)+' page '+i+fileLabel+'...');
+        var page = await pdf.getPage(i); var vp = page.getViewport({scale:scale});
+        var canvas = document.createElement('canvas'); canvas.width=vp.width; canvas.height=vp.height;
+        var ctx=canvas.getContext('2d'); await page.render({canvasContext:ctx,viewport:vp}).promise;
+        var id=ctx.getImageData(0,0,canvas.width,canvas.height);
+        for (var j=0;j<id.data.length;j+=4){var g=id.data[j]*0.299+id.data[j+1]*0.587+id.data[j+2]*0.114;id.data[j]=id.data[j+1]=id.data[j+2]=g;}
+        ctx.putImageData(id,0,0);
+        var blob=await new Promise(function(res){canvas.toBlob(res,'image/jpeg',qual);}); var imgBuf=await blob.arrayBuffer();
+        var img=await newDoc.embedJpg(imgBuf); var np=newDoc.addPage([img.width,img.height]); np.drawImage(img,{x:0,y:0,width:img.width,height:img.height});
+      }
+      bytes=await newDoc.save({useObjectStreams:true});
+    } else {
+      bytes = await doc.save({useObjectStreams: true});
     }
-    var bytes=await newDoc.save({useObjectStreams:true});
-    var fname = (document.getElementById('optCompressName')?document.getElementById('optCompressName').value.trim():'compressed')||'compressed';
-    if(!fname.endsWith('.pdf')) fname+='.pdf';
-    var saved=toolFiles[0].size>bytes.length?Math.round((1-bytes.length/toolFiles[0].size)*100):0;
-    showResults([{name:fname, size:fmtSize(bytes.length)+' (saved '+saved+'%)', url:URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}))}]);
-    return;
+    var fname = toolFiles.length > 1 ? toolFiles[fi].name.replace(/\.pdf$/i,'')+'_compressed.pdf' : (baseName.endsWith('.pdf')?baseName:baseName+'.pdf');
+    var saved = toolFiles[fi].size>bytes.length ? Math.round((1-bytes.length/toolFiles[fi].size)*100) : 0;
+    results.push({name:fname, size:fmtSize(bytes.length)+' (saved '+saved+'%)', url:URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}))});
   }
-  setP(80, 'Saving compressed PDF...');
-  var bytes = await doc.save({useObjectStreams: true});
-  var fname = (document.getElementById('optCompressName')?document.getElementById('optCompressName').value.trim():'compressed')||'compressed';
-  if(!fname.endsWith('.pdf')) fname+='.pdf';
-  var saved = toolFiles[0].size>bytes.length ? Math.round((1-bytes.length/toolFiles[0].size)*100) : 0;
-  showResults([{name:fname, size:fmtSize(bytes.length)+' (saved '+saved+'%)', url:URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}))}]);
+  setP(100,'Done!');
+  showResults(results);
 }
 
 async function tPDF2JPG() {
@@ -1440,33 +1441,39 @@ async function tPageNumbers() {
 }
 
 async function tGrayscalePDF() {
-  setP(10, 'Loading PDF...');
-  var buf = await toolFiles[0].arrayBuffer();
-  var pdf = await pdfjsLib.getDocument({data: new Uint8Array(buf)}).promise;
   var PDFDoc = PDFLib.PDFDocument;
-  var newDoc = await PDFDoc.create();
-  for (var i = 1; i <= pdf.numPages; i++) {
-    setP(Math.round(10+80*(i/pdf.numPages)), 'Converting page '+i+'...');
-    var page = await pdf.getPage(i);
-    var vp = page.getViewport({scale:2.0});
-    var canvas = document.createElement('canvas');
-    canvas.width = vp.width; canvas.height = vp.height;
-    var ctx = canvas.getContext('2d');
-    await page.render({canvasContext:ctx, viewport:vp}).promise;
-    var id = ctx.getImageData(0,0,canvas.width,canvas.height);
-    for (var j = 0; j < id.data.length; j+=4) {
-      var g = id.data[j]*0.299+id.data[j+1]*0.587+id.data[j+2]*0.114;
-      id.data[j]=id.data[j+1]=id.data[j+2]=g;
+  var results = [];
+  for (var fi = 0; fi < toolFiles.length; fi++) {
+    setP(Math.round(5+90*(fi/toolFiles.length)), 'Processing PDF '+(fi+1)+' of '+toolFiles.length+'...');
+    var buf = await toolFiles[fi].arrayBuffer();
+    var pdf = await pdfjsLib.getDocument({data: new Uint8Array(buf)}).promise;
+    var newDoc = await PDFDoc.create();
+    for (var i = 1; i <= pdf.numPages; i++) {
+      setP(Math.round(5+85*(fi/toolFiles.length)+85*(i/pdf.numPages)/toolFiles.length), 'File '+(fi+1)+' page '+i+'...');
+      var page = await pdf.getPage(i);
+      var vp = page.getViewport({scale:2.0});
+      var canvas = document.createElement('canvas');
+      canvas.width = vp.width; canvas.height = vp.height;
+      var ctx = canvas.getContext('2d');
+      await page.render({canvasContext:ctx, viewport:vp}).promise;
+      var id = ctx.getImageData(0,0,canvas.width,canvas.height);
+      for (var j = 0; j < id.data.length; j+=4) {
+        var g = id.data[j]*0.299+id.data[j+1]*0.587+id.data[j+2]*0.114;
+        id.data[j]=id.data[j+1]=id.data[j+2]=g;
+      }
+      ctx.putImageData(id,0,0);
+      var blob = await new Promise(function(res){ canvas.toBlob(res,'image/jpeg',0.9); });
+      var imgBuf = await blob.arrayBuffer();
+      var img = await newDoc.embedJpg(imgBuf);
+      var newPage = newDoc.addPage([img.width, img.height]);
+      newPage.drawImage(img,{x:0,y:0,width:img.width,height:img.height});
     }
-    ctx.putImageData(id,0,0);
-    var blob = await new Promise(function(res){ canvas.toBlob(res,'image/jpeg',0.9); });
-    var imgBuf = await blob.arrayBuffer();
-    var img = await newDoc.embedJpg(imgBuf);
-    var newPage = newDoc.addPage([img.width, img.height]);
-    newPage.drawImage(img,{x:0,y:0,width:img.width,height:img.height});
+    var bytes = await newDoc.save();
+    var fname = toolFiles[fi].name.replace(/\.pdf$/i,'')+'_grayscale.pdf';
+    results.push({name:fname, size:fmtSize(bytes.length), url:URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}))});
   }
-  setP(95,'Saving...'); var bytes = await newDoc.save();
-  showResults([{name:'grayscale.pdf', size:fmtSize(bytes.length), url:URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}))}]);
+  setP(100,'Done!');
+  showResults(results);
 }
 
 async function tReorderPDF() {
@@ -1497,40 +1504,49 @@ function toBlob(canvas, mime, q) {
 }
 
 async function tCompress() {
-  setP(20,'Loading image...');
   var qual = parseInt(document.getElementById('optQ').value)/100 || 0.85;
   var fmt  = document.getElementById('optOutFmt') ? document.getElementById('optOutFmt').value : 'jpeg';
   var mime = fmt==='png'?'image/png':fmt==='webp'?'image/webp':'image/jpeg';
   var ext  = fmt==='png'?'png':fmt==='webp'?'webp':'jpg';
-  var img = await loadImgEl(toolFiles[0]);
-  var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
-  var ctx=c.getContext('2d');
-  if (mime!=='image/png'){ ctx.fillStyle='#fff'; ctx.fillRect(0,0,c.width,c.height); }
-  ctx.drawImage(img,0,0);
-  setP(70,'Compressing...');
-  var blob = await toBlob(c,mime,qual);
-  showResults([{name:'compressed.'+ext, size:fmtSize(blob.size), url:URL.createObjectURL(blob)}]);
+  var results = [];
+  for (var i = 0; i < toolFiles.length; i++) {
+    setP(Math.round(5+90*(i/toolFiles.length)),'Compressing '+(i+1)+' of '+toolFiles.length+'...');
+    var img = await loadImgEl(toolFiles[i]);
+    var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
+    var ctx=c.getContext('2d');
+    if (mime!=='image/png'){ ctx.fillStyle='#fff'; ctx.fillRect(0,0,c.width,c.height); }
+    ctx.drawImage(img,0,0);
+    var blob = await toBlob(c,mime,qual);
+    var base = toolFiles[i].name.replace(/\.[^.]+$/,'');
+    results.push({name:base+'_compressed.'+ext, size:fmtSize(blob.size), url:URL.createObjectURL(blob)});
+  }
+  showResults(results);
 }
 
 async function tResize() {
-  setP(20,'Loading image...');
-  var img = await loadImgEl(toolFiles[0]);
   var keepAR = document.getElementById('optAR').value==='1';
-  var w = parseInt(document.getElementById('optW').value)||0;
-  var h = parseInt(document.getElementById('optH').value)||0;
-  if (!w && !h) { w=img.width; h=img.height; }
-  var ratio = img.width/img.height;
-  if (keepAR) {
-    if (w && !h) h=Math.round(w/ratio);
-    else if (!w && h) w=Math.round(h*ratio);
-    else if (w && h) { var rr=Math.min(w/img.width,h/img.height); w=Math.round(img.width*rr); h=Math.round(img.height*rr); }
-  }
-  setP(60,'Resizing to '+w+'\xd7'+h+'...');
-  var c = document.createElement('canvas'); c.width=w; c.height=h;
-  c.getContext('2d').drawImage(img,0,0,w,h);
+  var wIn = parseInt(document.getElementById('optW').value)||0;
+  var hIn = parseInt(document.getElementById('optH').value)||0;
   var qual = (document.getElementById('optRQ') ? parseInt(document.getElementById('optRQ').value)/100 : 0.9) || 0.9;
-  var blob = await toBlob(c,'image/jpeg',qual);
-  showResults([{name:'resized_'+w+'x'+h+'.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)}]);
+  var results = [];
+  for (var i = 0; i < toolFiles.length; i++) {
+    setP(Math.round(5+90*(i/toolFiles.length)),'Resizing '+(i+1)+' of '+toolFiles.length+'...');
+    var img = await loadImgEl(toolFiles[i]);
+    var w = wIn || img.width; var h = hIn || img.height;
+    if (!wIn && !hIn) { w=img.width; h=img.height; }
+    var ratio = img.width/img.height;
+    if (keepAR) {
+      if (wIn && !hIn) h=Math.round(w/ratio);
+      else if (!wIn && hIn) w=Math.round(h*ratio);
+      else if (wIn && hIn) { var rr=Math.min(w/img.width,h/img.height); w=Math.round(img.width*rr); h=Math.round(img.height*rr); }
+    }
+    var c = document.createElement('canvas'); c.width=w; c.height=h;
+    c.getContext('2d').drawImage(img,0,0,w,h);
+    var blob = await toBlob(c,'image/jpeg',qual);
+    var base = toolFiles[i].name.replace(/\.[^.]+$/,'');
+    results.push({name:base+'_'+w+'x'+h+'.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)});
+  }
+  showResults(results);
 }
 
 async function tCrop() {
@@ -1566,42 +1582,47 @@ async function tConvert(ext, mime) {
 }
 
 async function tWatermarkImg() {
-  setP(20,'Loading image...');
-  var img = await loadImgEl(toolFiles[0]);
-  var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
-  var ctx = c.getContext('2d'); ctx.drawImage(img,0,0);
   var text    = (document.getElementById('optIMGWM').value||'\xa9 PDFSnap').trim();
   var color   = document.getElementById('optWMC').value||'white';
   var opacity = parseInt(document.getElementById('optWMO').value)/100 || 0.5;
   var wpos    = document.getElementById('optWMPos') ? document.getElementById('optWMPos').value : 'center';
   var fsSetting = parseInt(document.getElementById('optWMFS') ? document.getElementById('optWMFS').value : '0') || 0;
-  var fs = fsSetting > 0 ? fsSetting : Math.max(16, Math.round(img.width*0.045));
-  ctx.save(); ctx.globalAlpha=opacity; ctx.fillStyle=color;
-  ctx.font='bold '+fs+'px sans-serif'; ctx.textBaseline='middle';
-  var tw = ctx.measureText(text).width;
-  var pad = Math.round(img.width*0.03);
-  if (wpos==='center') {
-    ctx.textAlign='center'; ctx.translate(img.width/2,img.height/2); ctx.rotate(-Math.PI/6); ctx.fillText(text,0,0);
-  } else if (wpos==='tile') {
-    ctx.textAlign='left';
-    var stepX=tw+img.width*0.25, stepY=fs*3;
-    for (var ty=-img.height;ty<img.height*2;ty+=stepY) {
-      for (var tx=-img.width;tx<img.width*2;tx+=stepX) {
-        ctx.save(); ctx.translate(tx,ty); ctx.rotate(-Math.PI/8); ctx.fillText(text,0,0); ctx.restore();
+  var results = [];
+  for (var i = 0; i < toolFiles.length; i++) {
+    setP(Math.round(5+90*(i/toolFiles.length)),'Watermarking '+(i+1)+' of '+toolFiles.length+'...');
+    var img = await loadImgEl(toolFiles[i]);
+    var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
+    var ctx = c.getContext('2d'); ctx.drawImage(img,0,0);
+    var fs = fsSetting > 0 ? fsSetting : Math.max(16, Math.round(img.width*0.045));
+    ctx.save(); ctx.globalAlpha=opacity; ctx.fillStyle=color;
+    ctx.font='bold '+fs+'px sans-serif'; ctx.textBaseline='middle';
+    var tw = ctx.measureText(text).width;
+    var pad = Math.round(img.width*0.03);
+    if (wpos==='center') {
+      ctx.textAlign='center'; ctx.translate(img.width/2,img.height/2); ctx.rotate(-Math.PI/6); ctx.fillText(text,0,0);
+    } else if (wpos==='tile') {
+      ctx.textAlign='left';
+      var stepX=tw+img.width*0.25, stepY=fs*3;
+      for (var ty=-img.height;ty<img.height*2;ty+=stepY) {
+        for (var tx=-img.width;tx<img.width*2;tx+=stepX) {
+          ctx.save(); ctx.translate(tx,ty); ctx.rotate(-Math.PI/8); ctx.fillText(text,0,0); ctx.restore();
+        }
       }
+    } else {
+      ctx.textAlign='left';
+      var wx, wy;
+      if (wpos==='bottom-right') { wx=img.width-tw-pad; wy=img.height-pad; }
+      else if (wpos==='bottom-left') { wx=pad; wy=img.height-pad; }
+      else if (wpos==='top-right') { wx=img.width-tw-pad; wy=pad+fs/2; }
+      else { wx=pad; wy=pad+fs/2; }
+      ctx.fillText(text,wx,wy);
     }
-  } else {
-    ctx.textAlign='left';
-    var wx, wy;
-    if (wpos==='bottom-right') { wx=img.width-tw-pad; wy=img.height-pad; }
-    else if (wpos==='bottom-left') { wx=pad; wy=img.height-pad; }
-    else if (wpos==='top-right') { wx=img.width-tw-pad; wy=pad+fs/2; }
-    else { wx=pad; wy=pad+fs/2; }
-    ctx.fillText(text,wx,wy);
+    ctx.restore();
+    var blob = await toBlob(c,'image/jpeg',0.92);
+    var base = toolFiles[i].name.replace(/\.[^.]+$/,'');
+    results.push({name:base+'_watermarked.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)});
   }
-  ctx.restore();
-  var blob = await toBlob(c,'image/jpeg',0.92);
-  showResults([{name:'watermarked.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)}]);
+  showResults(results);
 }
 
 async function tGrayscale() {
@@ -1622,127 +1643,154 @@ async function tGrayscale() {
 }
 
 async function tFlip() {
-  setP(20,'Loading image...');
-  var img = await loadImgEl(toolFiles[0]);
   var dir  = document.getElementById('optFlip').value;
   var fmt  = document.getElementById('optFlipFmt') ? document.getElementById('optFlipFmt').value : 'jpeg';
   var mime = fmt==='png'?'image/png':'image/jpeg';
   var ext  = fmt==='png'?'png':'jpg';
-  var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
-  var ctx = c.getContext('2d');
-  if (dir==='h'||dir==='both') { ctx.translate(c.width,0); ctx.scale(-1,1); }
-  if (dir==='v'||dir==='both') { ctx.translate(0,c.height); ctx.scale(1,-1); }
-  ctx.drawImage(img,0,0);
-  var blob = await toBlob(c,mime,0.92);
-  showResults([{name:'flipped.'+ext, size:fmtSize(blob.size), url:URL.createObjectURL(blob)}]);
+  var results = [];
+  for (var i = 0; i < toolFiles.length; i++) {
+    setP(Math.round(5+90*(i/toolFiles.length)),'Flipping '+(i+1)+' of '+toolFiles.length+'...');
+    var img = await loadImgEl(toolFiles[i]);
+    var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
+    var ctx = c.getContext('2d');
+    if (dir==='h'||dir==='both') { ctx.translate(c.width,0); ctx.scale(-1,1); }
+    if (dir==='v'||dir==='both') { ctx.translate(0,c.height); ctx.scale(1,-1); }
+    ctx.drawImage(img,0,0);
+    var blob = await toBlob(c,mime,0.92);
+    var base = toolFiles[i].name.replace(/\.[^.]+$/,'');
+    results.push({name:base+'_flipped.'+ext, size:fmtSize(blob.size), url:URL.createObjectURL(blob)});
+  }
+  showResults(results);
 }
 
 async function tRotateImg() {
-  setP(20,'Loading image...');
-  var img = await loadImgEl(toolFiles[0]);
   var customVal = document.getElementById('optRotCustom') ? document.getElementById('optRotCustom').value.trim() : '';
   var angle = (customVal !== '') ? parseInt(customVal)||0 : parseInt(document.getElementById('optRotI').value)||90;
   var bg    = document.getElementById('optRotBg') ? document.getElementById('optRotBg').value : 'white';
-  var rad = angle*Math.PI/180;
-  var sinA=Math.abs(Math.sin(rad)), cosA=Math.abs(Math.cos(rad));
-  var nw=Math.round(img.width*cosA+img.height*sinA), nh=Math.round(img.width*sinA+img.height*cosA);
-  var c = document.createElement('canvas'); c.width=nw; c.height=nh;
-  var ctx = c.getContext('2d');
-  if (bg!=='transparent') { ctx.fillStyle=bg; ctx.fillRect(0,0,nw,nh); }
-  ctx.translate(nw/2,nh/2); ctx.rotate(rad);
-  ctx.drawImage(img,-img.width/2,-img.height/2);
   var usePng = bg==='transparent';
-  var blob = await toBlob(c, usePng?'image/png':'image/jpeg', 0.92);
-  showResults([{name:'rotated.'+(usePng?'png':'jpg'), size:fmtSize(blob.size), url:URL.createObjectURL(blob)}]);
+  var rad = angle*Math.PI/180;
+  var results = [];
+  for (var i = 0; i < toolFiles.length; i++) {
+    setP(Math.round(5+90*(i/toolFiles.length)),'Rotating '+(i+1)+' of '+toolFiles.length+'...');
+    var img = await loadImgEl(toolFiles[i]);
+    var sinA=Math.abs(Math.sin(rad)), cosA=Math.abs(Math.cos(rad));
+    var nw=Math.round(img.width*cosA+img.height*sinA), nh=Math.round(img.width*sinA+img.height*cosA);
+    var c = document.createElement('canvas'); c.width=nw; c.height=nh;
+    var ctx = c.getContext('2d');
+    if (!usePng) { ctx.fillStyle=bg; ctx.fillRect(0,0,nw,nh); }
+    ctx.translate(nw/2,nh/2); ctx.rotate(rad);
+    ctx.drawImage(img,-img.width/2,-img.height/2);
+    var blob = await toBlob(c, usePng?'image/png':'image/jpeg', 0.92);
+    var base = toolFiles[i].name.replace(/\.[^.]+$/,'');
+    results.push({name:base+'_rotated.'+(usePng?'png':'jpg'), size:fmtSize(blob.size), url:URL.createObjectURL(blob)});
+  }
+  showResults(results);
 }
 
 async function tBrightness() {
-  setP(20,'Loading image...');
-  var img = await loadImgEl(toolFiles[0]);
-  var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
-  var ctx = c.getContext('2d'); ctx.drawImage(img,0,0);
   var b  = parseInt(document.getElementById('optB').value)||0;
   var con= parseInt(document.getElementById('optC').value)||0;
   var sat= parseInt(document.getElementById('optSat') ? document.getElementById('optSat').value : '0')||0;
   var hue= parseInt(document.getElementById('optHue') ? document.getElementById('optHue').value : '0')||0;
-  setP(60,'Adjusting...');
-  var id=ctx.getImageData(0,0,c.width,c.height);
   var factor=(259*(con+255))/(255*(259-con));
   function hue2rgb(p,q,t){if(t<0)t+=1;if(t>1)t-=1;if(t<1/6)return p+(q-p)*6*t;if(t<0.5)return q;if(t<2/3)return p+(q-p)*(2/3-t)*6;return p;}
-  for (var i=0;i<id.data.length;i+=4){
-    var r=id.data[i],g=id.data[i+1],b2=id.data[i+2];
-    r=Math.min(255,Math.max(0,factor*(r-128)+128+b));
-    g=Math.min(255,Math.max(0,factor*(g-128)+128+b));
-    b2=Math.min(255,Math.max(0,factor*(b2-128)+128+b));
-    if (sat!==0||hue!==0) {
-      var mx=Math.max(r,g,b2)/255,mn=Math.min(r,g,b2)/255;
-      var l=(mx+mn)/2,s2=0,h2=0;
-      if(mx!==mn){s2=l<0.5?(mx-mn)/(mx+mn):(mx-mn)/(2-mx-mn);var d=mx-mn;h2=mx===r/255?(g/255-b2/255)/d+(g<b2?6:0):mx===g/255?(b2/255-r/255)/d+2:(r/255-g/255)/d+4;h2/=6;}
-      if(sat!==0)s2=Math.max(0,Math.min(1,s2*(1+sat/100)));
-      if(hue!==0)h2=(h2+hue/360+1)%1;
-      if(s2===0){r=g=b2=l*255;}else{var q2=l<0.5?l*(1+s2):l+s2-l*s2,p2=2*l-q2;r=hue2rgb(p2,q2,h2+1/3)*255;g=hue2rgb(p2,q2,h2)*255;b2=hue2rgb(p2,q2,h2-1/3)*255;}
+  var results = [];
+  for (var i = 0; i < toolFiles.length; i++) {
+    setP(Math.round(5+90*(i/toolFiles.length)),'Adjusting '+(i+1)+' of '+toolFiles.length+'...');
+    var img = await loadImgEl(toolFiles[i]);
+    var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
+    var ctx = c.getContext('2d'); ctx.drawImage(img,0,0);
+    var id=ctx.getImageData(0,0,c.width,c.height);
+    for (var j=0;j<id.data.length;j+=4){
+      var r=id.data[j],g=id.data[j+1],b2=id.data[j+2];
+      r=Math.min(255,Math.max(0,factor*(r-128)+128+b));
+      g=Math.min(255,Math.max(0,factor*(g-128)+128+b));
+      b2=Math.min(255,Math.max(0,factor*(b2-128)+128+b));
+      if (sat!==0||hue!==0) {
+        var mx=Math.max(r,g,b2)/255,mn=Math.min(r,g,b2)/255;
+        var l=(mx+mn)/2,s2=0,h2=0;
+        if(mx!==mn){s2=l<0.5?(mx-mn)/(mx+mn):(mx-mn)/(2-mx-mn);var d=mx-mn;h2=mx===r/255?(g/255-b2/255)/d+(g<b2?6:0):mx===g/255?(b2/255-r/255)/d+2:(r/255-g/255)/d+4;h2/=6;}
+        if(sat!==0)s2=Math.max(0,Math.min(1,s2*(1+sat/100)));
+        if(hue!==0)h2=(h2+hue/360+1)%1;
+        if(s2===0){r=g=b2=l*255;}else{var q2=l<0.5?l*(1+s2):l+s2-l*s2,p2=2*l-q2;r=hue2rgb(p2,q2,h2+1/3)*255;g=hue2rgb(p2,q2,h2)*255;b2=hue2rgb(p2,q2,h2-1/3)*255;}
+      }
+      id.data[j]=Math.round(r); id.data[j+1]=Math.round(g); id.data[j+2]=Math.round(b2);
     }
-    id.data[i]=Math.round(r); id.data[i+1]=Math.round(g); id.data[i+2]=Math.round(b2);
+    ctx.putImageData(id,0,0);
+    var blob = await toBlob(c,'image/jpeg',0.92);
+    var base = toolFiles[i].name.replace(/\.[^.]+$/,'');
+    results.push({name:base+'_adjusted.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)});
   }
-  ctx.putImageData(id,0,0);
-  var blob = await toBlob(c,'image/jpeg',0.92);
-  showResults([{name:'adjusted.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)}]);
+  showResults(results);
 }
 
 async function tSharpen() {
-  setP(20,'Loading image...');
-  var img = await loadImgEl(toolFiles[0]);
-  var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
-  var ctx = c.getContext('2d'); ctx.drawImage(img,0,0);
-  var src=ctx.getImageData(0,0,c.width,c.height);
-  var dst=ctx.createImageData(c.width,c.height);
-  var w=c.width; var h=c.height;
   var kernel=[-1,-1,-1,-1,9,-1,-1,-1,-1];
-  setP(60,'Sharpening...');
-  for (var y=1;y<h-1;y++){
-    for (var x=1;x<w-1;x++){
-      var r=0,g=0,b=0;
-      for (var ky=-1;ky<=1;ky++){
-        for (var kx=-1;kx<=1;kx++){
-          var idx=((y+ky)*w+(x+kx))*4;
-          var kval=kernel[(ky+1)*3+(kx+1)];
-          r+=src.data[idx]*kval; g+=src.data[idx+1]*kval; b+=src.data[idx+2]*kval;
+  var results = [];
+  for (var i = 0; i < toolFiles.length; i++) {
+    setP(Math.round(5+90*(i/toolFiles.length)),'Sharpening '+(i+1)+' of '+toolFiles.length+'...');
+    var img = await loadImgEl(toolFiles[i]);
+    var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
+    var ctx = c.getContext('2d'); ctx.drawImage(img,0,0);
+    var src=ctx.getImageData(0,0,c.width,c.height);
+    var dst=ctx.createImageData(c.width,c.height);
+    var w=c.width; var h=c.height;
+    for (var y=1;y<h-1;y++){
+      for (var x=1;x<w-1;x++){
+        var r=0,g=0,b=0;
+        for (var ky=-1;ky<=1;ky++){
+          for (var kx=-1;kx<=1;kx++){
+            var idx=((y+ky)*w+(x+kx))*4;
+            var kval=kernel[(ky+1)*3+(kx+1)];
+            r+=src.data[idx]*kval; g+=src.data[idx+1]*kval; b+=src.data[idx+2]*kval;
+          }
         }
+        var oi=(y*w+x)*4;
+        dst.data[oi]=Math.min(255,Math.max(0,r));
+        dst.data[oi+1]=Math.min(255,Math.max(0,g));
+        dst.data[oi+2]=Math.min(255,Math.max(0,b));
+        dst.data[oi+3]=src.data[oi+3];
       }
-      var oi=(y*w+x)*4;
-      dst.data[oi]=Math.min(255,Math.max(0,r));
-      dst.data[oi+1]=Math.min(255,Math.max(0,g));
-      dst.data[oi+2]=Math.min(255,Math.max(0,b));
-      dst.data[oi+3]=src.data[oi+3];
     }
+    ctx.putImageData(dst,0,0);
+    var blob = await toBlob(c,'image/jpeg',0.92);
+    var base = toolFiles[i].name.replace(/\.[^.]+$/,'');
+    results.push({name:base+'_sharpened.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)});
   }
-  ctx.putImageData(dst,0,0);
-  var blob = await toBlob(c,'image/jpeg',0.92);
-  showResults([{name:'sharpened.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)}]);
+  showResults(results);
 }
 
 async function tBlur() {
-  setP(20,'Loading image...');
-  var img = await loadImgEl(toolFiles[0]);
   var blurAmt = parseInt(document.getElementById('optBlur').value)||5;
-  var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
-  var ctx = c.getContext('2d');
-  ctx.filter = 'blur('+blurAmt+'px)';
-  ctx.drawImage(img,0,0);
-  setP(80,'Saving...');
-  var blob = await toBlob(c,'image/jpeg',0.92);
-  showResults([{name:'blurred.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)}]);
+  var results = [];
+  for (var i = 0; i < toolFiles.length; i++) {
+    setP(Math.round(5+90*(i/toolFiles.length)),'Blurring '+(i+1)+' of '+toolFiles.length+'...');
+    var img = await loadImgEl(toolFiles[i]);
+    var c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
+    var ctx = c.getContext('2d');
+    ctx.filter = 'blur('+blurAmt+'px)';
+    ctx.drawImage(img,0,0);
+    var blob = await toBlob(c,'image/jpeg',0.92);
+    var base = toolFiles[i].name.replace(/\.[^.]+$/,'');
+    results.push({name:base+'_blurred.jpg', size:fmtSize(blob.size), url:URL.createObjectURL(blob)});
+  }
+  showResults(results);
 }
 
 async function tImgToPDF() {
-  setP(20,'Loading image...'); var PDFDoc = PDFLib.PDFDocument;
+  setP(10,'Creating PDF...'); var PDFDoc = PDFLib.PDFDocument;
   var doc = await PDFDoc.create();
-  var buf = await toolFiles[0].arrayBuffer();
-  var img = toolFiles[0].type==='image/png' ? await doc.embedPng(buf) : await doc.embedJpg(buf);
-  var page = doc.addPage([img.width,img.height]);
-  page.drawImage(img,{x:0,y:0,width:img.width,height:img.height});
-  setP(90,'Saving...'); var bytes = await doc.save();
-  showResults([{name:'image.pdf', size:fmtSize(bytes.length), url:URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}))}]);
+  for (var i = 0; i < toolFiles.length; i++) {
+    setP(Math.round(10+80*(i/toolFiles.length)),'Adding image '+(i+1)+' of '+toolFiles.length+'...');
+    var buf = await toolFiles[i].arrayBuffer();
+    var isPng = toolFiles[i].type==='image/png';
+    var img = isPng ? await doc.embedPng(buf) : await doc.embedJpg(buf);
+    var page = doc.addPage([img.width,img.height]);
+    page.drawImage(img,{x:0,y:0,width:img.width,height:img.height});
+  }
+  setP(95,'Saving...'); var bytes = await doc.save();
+  var fname = toolFiles.length > 1 ? 'images.pdf' : 'image.pdf';
+  showResults([{name:fname, size:fmtSize(bytes.length), url:URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}))}]);
 }
 
 // ═══ DYNAMIC OPTION UI HELPERS ═══
