@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="theme-color" content="#FF4D00"/>
+<meta name="google-site-verification" content="5ZxCmC9IahybqzrrNd2T9PtoRazD18AYYd9qR8jo1Xk"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NT288WP4YR"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NT288WP4YR');</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7352879981287034" crossorigin="anonymous"></script>
-<meta charset="UTF-8"/>
-<meta name="google-site-verification" content="5ZxCmC9IahybqzrrNd2T9PtoRazD18AYYd9qR8jo1Xk"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>About PDFSnap — Who We Are &amp; Our Mission</title>
+<script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7352879981287034';s.crossOrigin='anonymous';document.head.appendChild(s);});</script>
+<title>About PDFSnap — Who We Are & Our Mission</title>
 <meta name="description" content="Learn about PDFSnap — built by developers who were tired of paying for basic PDF tools. Free, private, browser-based PDF and image tools for everyone."/>
 <link rel="canonical" href="https://pdfsnap.github.io/about.html"/>
-<link rel="icon" type="image/x-icon" href="favicon.ico"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0a0a0f;--sur:#13131a;--card:#1a1a24;--bdr:#2a2a3a;--acc:#ff4d00;--acc2:#ff8c42;--txt:#f0f0f5;--mut:#8888aa;--ok:#00e5a0}
+:root{
+  --bg:#FFF8F4;--sur:#FFFFFF;--card:#FFFFFF;--bdr:#F0E4DC;
+  --acc:#FF4D00;--acc2:#FF8C42;--acc-light:#FFF0EA;
+  --txt:#1A1218;--mut:#7B6B64;
+  --ok:#00B894;--ok-light:#E8FBF6;
+  --bl:#4D8FFF;--warn:#FFB800;
+  --shadow:0 2px 16px rgba(255,77,0,0.07);
+  --shadow-hover:0 8px 32px rgba(255,77,0,0.14);
+}
+html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;background:rgba(10,10,15,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr)}
-.logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--txt);text-decoration:none}.logo span{color:var(--acc)}
-.nav-links{display:flex;gap:1.5rem}.nav-links a{color:var(--mut);text-decoration:none;font-size:.85rem;font-weight:600;transition:color .2s}.nav-links a:hover{color:var(--acc)}
-.container{max-width:800px;margin:0 auto;padding:3rem 1.5rem}
-.hero{text-align:center;padding:3rem 0 2rem}
-h1{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;margin-bottom:.8rem}h1 span{color:var(--acc)}
-.hero-sub{color:var(--mut);font-size:.97rem;max-width:520px;margin:0 auto;line-height:1.7}
-h2{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:.7rem;color:var(--acc)}
-p{color:var(--mut);font-size:.9rem;line-height:1.8;margin-bottom:1rem}
-.card{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:1.5rem;margin-bottom:1rem}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.85rem 2rem;background:rgba(255,248,244,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-size:1.35rem;font-weight:800;color:var(--txt);text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--acc)}
+.nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{color:var(--mut);text-decoration:none;font-size:.85rem;font-weight:600;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--acc)}
+.nav-badge{font-size:.67rem;background:var(--ok-light);color:var(--ok);padding:3px 10px;border-radius:99px;font-weight:700;border:1px solid rgba(0,184,148,.2)}
+footer{background:var(--sur);border-top:1px solid var(--bdr);padding:2.5rem 2rem;text-align:center}
+.footer-inner{max-width:900px;margin:0 auto}
+.footer-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:800;color:var(--txt);margin-bottom:.4rem}
+.footer-logo span{color:var(--acc)}
+.footer-tagline{color:var(--mut);font-size:.82rem;margin-bottom:1rem;line-height:1.6}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:.8rem}
+.footer-links a{color:var(--mut);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s}
+.footer-links a:hover{color:var(--acc)}
+.footer-copy{color:var(--mut);font-size:.75px;opacity:.7}
+h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.02em}
+h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-.01em}
+h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:700}
+.container{max-width:820px;margin:0 auto;padding:3rem 1.5rem 5rem}
+.page-hero{text-align:center;padding:2rem 0 1.5rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--acc-light);border:1px solid rgba(255,77,0,.2);color:var(--acc);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:99px;margin-bottom:1rem}
+.page-hero h1{font-size:2.2rem;margin-bottom:.7rem}
+.page-hero h1 span{color:var(--acc)}
+.page-hero p{color:var(--mut);font-size:.97rem;max-width:520px;margin:0 auto;line-height:1.7}
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:2rem 0}
-.stat-card{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:1.5rem;text-align:center}
-.stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--acc)}.stat-label{color:var(--mut);font-size:.8rem;margin-top:.3rem}
-.tools-list{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.8rem}
-.tool-item{background:var(--sur);border:1px solid var(--bdr);border-radius:9px;padding:.6rem .9rem;font-size:.83rem;color:var(--mut)}.tool-item span{color:var(--acc);margin-right:.4rem}
-.founder-card{background:var(--sur);border:1px solid var(--bdr);border-radius:14px;padding:1.5rem;display:flex;gap:1.5rem;align-items:flex-start;margin-top:.8rem}
-.founder-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;border:3px solid rgba(255,77,0,.25)}
-.founder-name{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--txt);margin-bottom:.15rem}
+.stat-card{background:var(--sur);border:1.5px solid var(--bdr);border-radius:16px;padding:1.5rem;text-align:center;box-shadow:var(--shadow)}
+.stat-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;color:var(--acc)}
+.stat-label{color:var(--mut);font-size:.8rem;margin-top:.3rem}
+.card{background:var(--sur);border:1.5px solid var(--bdr);border-radius:16px;padding:1.6rem;margin-bottom:1.2rem;box-shadow:var(--shadow)}
+.card h2{font-size:1.05rem;color:var(--acc);margin-bottom:.9rem}
+.card p{color:var(--mut);font-size:.9rem;line-height:1.8;margin-bottom:.9rem}
+.card p:last-child{margin-bottom:0}
+.card ul{color:var(--mut);font-size:.9rem;line-height:1.8;margin-bottom:.9rem;padding-left:1.4rem}
+.card ul li{margin-bottom:.3rem}
+.founder-card{background:var(--bg);border:1.5px solid var(--bdr);border-radius:14px;padding:1.4rem;display:flex;gap:1.4rem;align-items:flex-start}
+.founder-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}
+.founder-name{font-family:'Bricolage Grotesque',sans-serif;font-size:1.05rem;font-weight:800;color:var(--txt);margin-bottom:.15rem}
 .founder-role{font-size:.75rem;color:var(--acc);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.6rem}
 .founder-bio{font-size:.87rem;color:var(--mut);line-height:1.75;margin-bottom:.75rem}
 .founder-tags{display:flex;flex-wrap:wrap;gap:.4rem}
-.tag{background:rgba(255,77,0,.1);color:var(--acc2);font-size:.71rem;font-weight:600;padding:3px 9px;border-radius:99px;border:1px solid rgba(255,77,0,.2)}
-.timeline{margin:.8rem 0}
-.tl-item{display:flex;gap:1rem;margin-bottom:1.2rem}
-.tl-year{font-family:'Syne',sans-serif;font-size:.8rem;font-weight:800;color:var(--acc);min-width:40px;padding-top:.15rem}
-.tl-dot{width:9px;height:9px;border-radius:50%;background:var(--acc);margin-top:.3rem;flex-shrink:0}
-.tl-text{font-size:.86rem;color:var(--mut);line-height:1.7}
-.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.8rem}
-.value-item{background:var(--sur);border:1px solid var(--bdr);border-radius:12px;padding:1rem;display:flex;gap:.7rem;align-items:flex-start}
+.tag{background:var(--acc-light);color:var(--acc);font-size:.71rem;font-weight:600;padding:3px 9px;border-radius:99px;border:1px solid rgba(255,77,0,.2)}
+.tl-item{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
+.tl-year{font-family:'Bricolage Grotesque',sans-serif;font-size:.82rem;font-weight:800;color:var(--acc);min-width:40px;padding-top:.1rem}
+.tl-line{display:flex;flex-direction:column;align-items:center;gap:0}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:var(--acc);flex-shrink:0;margin-top:.15rem}
+.tl-bar{width:2px;height:100%;background:var(--bdr);flex:1;margin-top:4px}
+.tl-text{font-size:.86rem;color:var(--mut);line-height:1.7;flex:1}
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.value-item{background:var(--bg);border:1.5px solid var(--bdr);border-radius:12px;padding:1rem;display:flex;gap:.75rem;align-items:flex-start}
 .value-icon{font-size:1.3rem;flex-shrink:0}
-.value-title{font-family:'Syne',sans-serif;font-size:.84rem;font-weight:700;color:var(--txt);margin-bottom:.2rem}
-.value-desc{font-size:.78rem;color:var(--mut);line-height:1.5}
-footer{text-align:center;padding:2rem;color:var(--mut);font-size:.8rem;border-top:1px solid var(--bdr)}footer strong{color:var(--txt)}footer a{color:var(--acc);text-decoration:none}
-@media(max-width:600px){.tools-list,.values-grid{grid-template-columns:1fr}.nav-links{gap:.8rem}.founder-card{flex-direction:column;align-items:center;text-align:center}.founder-tags{justify-content:center}}
+.value-title{font-family:'Bricolage Grotesque',sans-serif;font-size:.88rem;font-weight:700;color:var(--txt);margin-bottom:.2rem}
+.value-desc{font-size:.78rem;color:var(--mut);line-height:1.55}
+.tools-list{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.9rem}
+.tool-item{background:var(--bg);border:1.5px solid var(--bdr);border-radius:9px;padding:.55rem .85rem;font-size:.83rem;color:var(--mut);display:flex;align-items:center;gap:.4rem}
+.tool-item span{font-size:1rem}
+@media(max-width:600px){.tools-list,.values-grid{grid-template-columns:1fr}.founder-card{flex-direction:column;align-items:center;text-align:center}.founder-tags{justify-content:center}}
 </style>
 </head>
 <body>
@@ -58,20 +93,23 @@ footer{text-align:center;padding:2rem;color:var(--mut);font-size:.8rem;border-to
   <div class="nav-links">
     <a href="index.html">🏠 Home</a>
     <a href="blog.html">📝 Blog</a>
+    <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
+    <span class="nav-badge">100% Free</span>
   </div>
 </nav>
 <div class="container">
-  <div class="hero">
+  <div class="page-hero">
+    <div class="eyebrow">👋 Our Story</div>
     <h1>About <span>PDFSnap</span></h1>
-    <p class="hero-sub">Built by developers who were tired of paying $20/month just to compress a PDF. We made it free — for everyone, forever.</p>
+    <p>Built by developers who were tired of paying $20/month just to compress a PDF. We made it free — for everyone, forever.</p>
   </div>
 
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-num">16+</div><div class="stat-label">Free Tools</div></div>
+    <div class="stat-card"><div class="stat-num">35+</div><div class="stat-label">Free Tools</div></div>
     <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Browser Based</div></div>
     <div class="stat-card"><div class="stat-num">0</div><div class="stat-label">Server Uploads</div></div>
-    <div class="stat-card"><div class="stat-num">30+</div><div class="stat-label">Free Guides</div></div>
+    <div class="stat-card"><div class="stat-num">40+</div><div class="stat-label">Free Guides</div></div>
   </div>
 
   <div class="card">
@@ -80,12 +118,12 @@ footer{text-align:center;padding:2rem;color:var(--mut);font-size:.8rem;border-to
       <div class="founder-avatar">👨‍💻</div>
       <div>
         <div class="founder-name">Mohammad Armaan</div>
-        <div class="founder-role">Founder &amp; Developer · PDFSnap</div>
-        <p class="founder-bio">I'm a software developer with 8 years of experience building web applications. I started PDFSnap in 2025 after watching friends pay for Adobe Acrobat just to do simple things — compress a file, rotate a page, merge two PDFs. These are operations that modern browsers can handle entirely on-device, with no server needed and no subscription required.<br><br>I built PDFSnap using PDF.js, pdf-lib, and the Canvas API. Every tool processes your files locally in your browser. Your documents never leave your device — that's something I take seriously, because I wouldn't want my own files sent to unknown servers either.</p>
+        <div class="founder-role">Founder & Developer · PDFSnap</div>
+        <p class="founder-bio">I'm a software developer with 8+ years of experience building web applications. I started PDFSnap after watching friends pay for Adobe Acrobat just to do simple things — compress a file, rotate a page, merge two PDFs.<br><br>These are operations that modern browsers can handle entirely on-device. There is no technical reason they should cost $20/month. So I built PDFSnap — using PDF.js, pdf-lib, and the Canvas API. Your documents never leave your device. That's something I take seriously.</p>
         <div class="founder-tags">
           <span class="tag">Web Development</span>
           <span class="tag">JavaScript</span>
-          <span class="tag">Privacy Advocate</span>
+          <span class="tag">Privacy First</span>
           <span class="tag">PDF Tooling</span>
           <span class="tag">Open Source</span>
         </div>
@@ -95,97 +133,101 @@ footer{text-align:center;padding:2rem;color:var(--mut);font-size:.8rem;border-to
 
   <div class="card">
     <h2>📖 Our Story</h2>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-year">2024</div>
-        <div class="tl-dot"></div>
-        <div class="tl-text">The idea started when a friend needed to compress a PDF to email it for a job application. Every free tool online either had a file size limit, added a watermark, uploaded files to unknown servers, or pressured them to pay. There had to be a better way.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">2025</div>
-        <div class="tl-dot"></div>
-        <div class="tl-text">PDFSnap launched with 8 core PDF tools — all running locally in the browser with zero server uploads. Core principle: powerful tools that respect user privacy, with no paywalls, no watermarks, and no upsells.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">2026</div>
-        <div class="tl-dot"></div>
-        <div class="tl-text">Expanded to 16+ tools covering image editing, PDF conversion, compression, watermarking, signing, and more. Launched a knowledge base with 30+ practical guides — helping users understand their files and the tools available to them, completely free.</div>
-      </div>
+    <div class="tl-item">
+      <div class="tl-year">2024</div>
+      <div class="tl-text">The idea started when a friend needed to compress a PDF for a job application. Every free tool added watermarks, uploaded to unknown servers, or demanded payment. There had to be a better way.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2025</div>
+      <div class="tl-text">PDFSnap launched with 8 core PDF tools — all running locally in the browser with zero server uploads. Core principle: powerful tools that respect user privacy, with no paywalls and no watermarks.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2026</div>
+      <div class="tl-text">Expanded to 35+ tools covering image editing, PDF conversion, compression, QR codes, and more. Launched 40+ practical guides helping users work smarter with their files, completely free.</div>
     </div>
   </div>
 
   <div class="card">
     <h2>🎯 Our Mission</h2>
-    <p>PDFSnap exists to prove that basic file tools don't need to cost money. The PDF format has been around for over 30 years. Modern browsers are powerful enough to handle PDF and image processing entirely on-device. There is no technical reason these tools should cost $20/month.</p>
-    <p style="margin-bottom:0">Our mission: give everyone — students, freelancers, small businesses, and professionals — access to the same tools that large companies pay for, completely free and with full privacy.</p>
+    <p>PDFSnap exists to prove that basic file tools don't need to cost money. The PDF format has been around for over 30 years. Modern browsers are powerful enough to handle PDF and image processing entirely on-device.</p>
+    <p>Our mission: give everyone — students, freelancers, small businesses, and professionals — access to the same tools that large companies pay for, completely free and with full privacy.</p>
   </div>
 
   <div class="card">
     <h2>💡 What We Stand For</h2>
     <div class="values-grid">
       <div class="value-item"><div class="value-icon">🔒</div><div><div class="value-title">Privacy First</div><div class="value-desc">Your files never leave your device. Zero server uploads — ever. We built the tools this way on purpose.</div></div></div>
-      <div class="value-item"><div class="value-icon">🆓</div><div><div class="value-title">Genuinely Free</div><div class="value-desc">No hidden limits, no watermarks, no "free trial." All tools work fully for free — no account required.</div></div></div>
-      <div class="value-item"><div class="value-icon">⚡</div><div><div class="value-title">Fast &amp; Simple</div><div class="value-desc">No waiting for uploads or queues. Processing happens instantly in your browser — even offline.</div></div></div>
-      <div class="value-item"><div class="value-icon">📚</div><div><div class="value-title">Honest Guides</div><div class="value-desc">Our blog covers real problems with real solutions. No sponsored rankings or fake reviews — just honest, practical advice.</div></div></div>
+      <div class="value-item"><div class="value-icon">🆓</div><div><div class="value-title">Genuinely Free</div><div class="value-desc">No hidden limits, no watermarks, no "free trial." All 35+ tools work fully — no account required.</div></div></div>
+      <div class="value-item"><div class="value-icon">⚡</div><div><div class="value-title">Actually Fast</div><div class="value-desc">No upload queues. Processing happens instantly in your browser, even offline after first load.</div></div></div>
+      <div class="value-item"><div class="value-icon">🎯</div><div><div class="value-title">Only Real Tools</div><div class="value-desc">Every tool listed is tested and functional. No "coming soon" placeholders, no fake tools.</div></div></div>
     </div>
   </div>
 
   <div class="card">
-    <h2>🛠️ What We Offer</h2>
-    <p>16+ tools across PDF and image editing — all free, all browser-based:</p>
+    <h2>🛠️ All 35+ Tools</h2>
+    <p>PDF and image tools — all free, all browser-based:</p>
     <div class="tools-list">
       <div class="tool-item"><span>📄</span>Merge PDF</div>
       <div class="tool-item"><span>📄</span>Split PDF</div>
       <div class="tool-item"><span>📄</span>Compress PDF</div>
       <div class="tool-item"><span>📄</span>Rotate PDF</div>
-      <div class="tool-item"><span>📄</span>PDF to JPG</div>
+      <div class="tool-item"><span>📄</span>PDF to JPG/PNG</div>
       <div class="tool-item"><span>📄</span>Images to PDF</div>
       <div class="tool-item"><span>📄</span>Watermark PDF</div>
+      <div class="tool-item"><span>📄</span>Add Page Numbers</div>
+      <div class="tool-item"><span>📄</span>Extract PDF Pages</div>
+      <div class="tool-item"><span>📄</span>Delete PDF Pages</div>
+      <div class="tool-item"><span>📄</span>Unlock PDF</div>
+      <div class="tool-item"><span>📄</span>PDF to Grayscale</div>
       <div class="tool-item"><span>🖼️</span>Compress Image</div>
       <div class="tool-item"><span>🖼️</span>Resize Image</div>
       <div class="tool-item"><span>🖼️</span>Crop Image</div>
-      <div class="tool-item"><span>🖼️</span>JPG to PNG</div>
-      <div class="tool-item"><span>🖼️</span>PNG to JPG</div>
-      <div class="tool-item"><span>🖼️</span>Watermark Image</div>
-      <div class="tool-item"><span>🖼️</span>Grayscale Image</div>
+      <div class="tool-item"><span>🖼️</span>Rotate Image</div>
       <div class="tool-item"><span>🖼️</span>Flip Image</div>
-      <div class="tool-item"><span>🖼️</span>Brightness &amp; Contrast</div>
+      <div class="tool-item"><span>🖼️</span>Brightness & Contrast</div>
+      <div class="tool-item"><span>🖼️</span>Sharpen Image</div>
+      <div class="tool-item"><span>🖼️</span>Blur Image</div>
+      <div class="tool-item"><span>🖼️</span>Grayscale Image</div>
+      <div class="tool-item"><span>🖼️</span>Invert Colors</div>
+      <div class="tool-item"><span>🖼️</span>Add Border</div>
+      <div class="tool-item"><span>🖼️</span>Watermark Image</div>
+      <div class="tool-item"><span>🔁</span>JPG to PNG</div>
+      <div class="tool-item"><span>🔁</span>PNG to JPG</div>
+      <div class="tool-item"><span>🔁</span>WebP to JPG</div>
+      <div class="tool-item"><span>🔁</span>JPG to WebP</div>
+      <div class="tool-item"><span>📱</span>QR Code Generator</div>
+      <div class="tool-item"><span>ℹ️</span>Image Info</div>
+      <div class="tool-item"><span>🔤</span>Image to Base64</div>
+      <div class="tool-item"><span>🔏</span>Remove EXIF</div>
     </div>
   </div>
 
   <div class="card">
-    <h2>🔒 Privacy — How It Actually Works</h2>
-    <p>When you use a PDFSnap tool, your file is loaded into your browser's memory using the JavaScript File API. The PDF.js and pdf-lib libraries then process it entirely on your device — no network request is ever made with your file data.</p>
-    <p>✅ Your files are never uploaded to any server<br/>
-    ✅ No account required to use any tool<br/>
-    ✅ No watermark added to your files<br/>
-    ✅ No file size limits imposed by us<br/>
-    ✅ Works offline after first page load<br/>
-    ✅ We don't sell, share, or analyze your data</p>
-    <p style="margin-bottom:0">We use Google Analytics (anonymized) to understand which tools are most used, and Google AdSense to display ads that fund the site. Neither service receives your file content.</p>
-  </div>
-
-  <div class="card">
-    <h2>📢 How We Stay Free</h2>
-    <p>PDFSnap is funded by non-intrusive display ads through Google AdSense. These ads allow us to cover hosting costs and keep developing new tools and guides — while keeping everything free for users.</p>
-    <p style="margin-bottom:0">We appreciate your support by whitelisting PDFSnap in your ad blocker. It directly helps us keep the tools free and improve the site.</p>
+    <h2>🔒 How Privacy Actually Works</h2>
+    <p>When you use a PDFSnap tool, your file is loaded into your browser's memory using the JavaScript File API. The PDF.js and pdf-lib libraries process it entirely on your device — no network request is ever made with your file data.</p>
+    <p>✅ Files never uploaded to any server<br/>✅ No account required<br/>✅ No watermarks on output<br/>✅ Works offline after first load<br/>✅ We don't sell or analyze your data</p>
+    <p>We use Google Analytics (anonymized) and Google AdSense. Neither service receives your file content.</p>
   </div>
 
   <div class="card">
     <h2>📬 Get In Touch</h2>
-    <p>Found a bug? Have a suggestion for a new tool or guide? We read every message and respond within 48 hours.</p>
-    <p style="margin-bottom:0">→ <a href="contact.html" style="color:var(--acc);font-weight:600">Visit our Contact page</a> to send us a message.</p>
+    <p>Found a bug? Have a suggestion for a new tool? We read every message.</p>
+    <p><a href="contact.html" style="color:var(--acc);font-weight:600">→ Visit our Contact page</a> to send us a message. We respond within 48 hours.</p>
   </div>
 </div>
-
 <footer>
-  <strong>PDFSnap</strong> — All tools run entirely in your browser. No files uploaded to any server.<br/>
-  <span style="margin-top:.3rem;display:block">© 2026 PDFSnap ·
-    <a href="privacy-policy.html">Privacy Policy</a> ·
-    <a href="terms.html">Terms of Service</a> ·
-    <a href="contact.html">Contact</a> ·
-    <a href="blog.html">Blog</a>
-  </span>
+  <div class="footer-inner">
+    <div class="footer-logo">PDF<span>Snap</span></div>
+    <div class="footer-tagline">Built by people who got tired of paying for basic PDF tools.<br/>All processing runs in your browser — we never see your files.</div>
+    <div class="footer-links">
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <div class="footer-copy">© 2026 PDFSnap · Free tools, forever 🧡</div>
+  </div>
 </footer>
 </body>
 </html>
